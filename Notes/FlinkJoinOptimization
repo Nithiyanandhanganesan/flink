@@ -1,0 +1,12 @@
+JoinHints:
+
+
+-> Optimizer_choses
+    - leave choice to sysstem to decide
+-> Broadcast_hash_first
+    - broacast the first input table and do join
+-> broadcast_hash_second
+    - broadcase second input table and do join
+-> repartition_hash_first
+-> repartition_hash_second
+-> repartition_sort_merge

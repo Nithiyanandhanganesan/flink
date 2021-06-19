@@ -1,0 +1,18 @@
+Go to https://flink.apache.org/downloads.html
+
+-> Download the latest version of Flink.
+-> Extract the jar
+-> cd /Users/nithiyanandhan/Desktop/install_software/flink-1.13.1
+-> Run below command
+   ./bin/start-cluster.sh
+
+-> It will print below lines when you start
+   Starting cluster.
+   Starting standalonesession daemon on host NITHIYANANDHANs-MacBook-Pro.local.
+   Starting taskexecutor daemon on host NITHIYANANDHANs-MacBook-Pro.local.
+
+-> To validate whether flink is running or not, check the below url.
+    localhost:8081
+
+-> To setup flink in intelliij, create the maven project and add the required dependecny.
+   Refer the "FlinkHelloWorld" for more details.

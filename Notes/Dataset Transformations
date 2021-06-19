@@ -1,0 +1,19 @@
+Dataset transformations:
+==========================
+
+-> filter , map, flatmap, groupBy
+
+-> env.readTextFile(params.get("input"));
+     read files line wise and returns them as dataset of strings.
+
+-> env.readCsvFile(path)
+    take csv file as intput and returns a dataset of tuples.
+
+-> readFileOfPrimitives(path,Class)
+    reads each line of file in the form of class mentioned in the arguments.
+
+-> readFileOfPrimitives(path,delimiter,Class)
+    read each line of file in the form of class mentioned in arguments using a delimiter
+
+-> readHadoopFile(FileInputFormat , key, value, path)
+-> readSequenceFile(key,value,path)

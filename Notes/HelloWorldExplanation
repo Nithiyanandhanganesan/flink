@@ -1,0 +1,27 @@
+-> Main package to import
+  import org.apache.flink.api.java.DataSet;
+
+-> ExecutionEnvironment
+   setting up the environment. Its the environment where our program will run.
+   control the job execution. in local, it will run in local jvm.
+
+-> env.getConfig().setGlobalJobParameters(params);
+   params available for all the nodes in the cluster.
+
+-> env.readTextFile(params.get("input"));
+     read files line wise and returns them as dataset of strings.
+
+-> tokenized.groupBy(0).sum(1);
+    0 refers first field in the data.
+    1 refrts first field in the data.
+
+->  counts.writeAsCsv(params.get("output"),"\n"," ");
+    each row separeted by new line and each field separated by " ".
+
+-> env.execute()
+   start with the executed of program.
+
+-> to run the program, use the following
+   ./bin/flink run jarpath.jar --input inputfilepath --output outputfolder
+
+   ./bin/flink run -c com.anand.flink.WordCount /Users/nithiyanandhan/IdeaProjects/flink/HelloWorldFlink/target/HelloWorldFlink-1.0-SNAPSHOT.jar --input /Users/nithiyanandhan/IdeaProjects/flink/HelloWorldFlink/src/main/resources/wordcount --output /Users/nithiyanandhan/IdeaProjects/flink/HelloWorldFlink/target

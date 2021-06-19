@@ -1,0 +1,45 @@
+-> Flink is an real time open-source stream processing framework for distributed
+-> support batch processing as well.
+-> Flink is faster then spark.
+-> Best tool of stream processing.
+-> Robust Faut tolerance -> application can restart exactly from same point where it failed.
+-> Scalable.
+-> Guarantee that every record is processed exactly once.
+-> First version released in 2016
+
+-> In-memory computation.
+-> Easy to program.
+-> Have own ML libraries.
+
+Spark vs Flink:
+=================
+
+-> Spark is not true real time. Its micro batching. Whereas Flink is real time.
+-> Flink implemented in Java
+-> Flink has its own efficient automatic memory manager but spark does not have efficient memory manager.
+-> In spark we get Out of Memory error whereas flink rately gets out of memory.
+-> Spark uses DAG but Flink uses controlled cyclic dependency graph.
+
+
+Flink High level programming model:
+======================================
+
+
+Source   ===============>   Operations or   ================> Sink
+(File, kafka,               Tranformations                    HDFS, Databases, Memory
+ Flume, Socket)
+
+
+Block1  (Readfile) -> Node A1  (Filter) -> Node A2 (groupBy) ->  Node A3 (sum,count) -> output
+
+Block2  (Readfile) -> Node b1  (Filter) -> Node b2 (groupBy) ->  Node b3 (sum,count) -> output
+
+Above flow will run in all worker nodes.
+
+
+Each node keeps intermediate output in-memory.
+
+
+-> Flink can perform Operation on either "Dataset" or "DataStream"
+-> DataSet is immutable. Any operation on dataset result in new dataset.
+
